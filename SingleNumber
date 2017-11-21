@@ -1,0 +1,18 @@
+var singleNumber = function(nums) {
+    var resultObj1 = {};
+     var resultObj2 = {};
+    var count =0;
+    for(var i =0; i<nums.length; i++){
+        if(resultObj1[nums[i]]){
+            delete resultObj1[nums[i]];
+            resultObj2[nums[i]] = 1
+        } else {
+            resultObj1[nums[i]] = 1;
+        }
+    
+        
+    }
+    
+    return parseInt(Object.keys(resultObj1));
+    
+};
