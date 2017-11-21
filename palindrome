@@ -4,8 +4,8 @@ var len = str.length;
 var resultArr =[];
 var alpaArr = 'abcdefghijklmnopqrstuvwxyz'.split('');
 for(var i=0; i< len;i++){
-if(alpaArr.indexOf(charArr[i]) > -1){
-resultArr.push(charArr[i]);
+  if(alpaArr.indexOf(charArr[i]) > -1){
+  resultArr.push(charArr[i]);
 }
 }
 if(resultArr.join('') == resultArr.reverse().join('')){
