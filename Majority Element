@@ -1,0 +1,29 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var majorityElement = function(nums) {
+    var len = nums.length;
+    var mElem = {};
+    var hLen = Math.round(len/2);
+  var maxValue = 0;
+    
+    
+    for(var i=0; i<nums.length;i++){
+        if(mElem[nums[i]]){
+          mElem[nums[i]]=mElem[nums[i]]+1; 
+        }else{
+           mElem[nums[i]]=1; 
+        }
+    }
+  
+    for(var key in mElem){
+     var value = mElem[key];
+      if(value >= hLen){
+        maxValue = value;
+      }      
+    }
+     const fValue = Object.keys(mElem).find(key => mElem[key] === maxValue);
+     return parseInt(fValue);
+   
+};
